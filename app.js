@@ -41,5 +41,5 @@ app.get("/:time", function(req,res){
 	res.end(JSON.stringify(result));
 });
 
-app.listen(PORT_NUMBER);
+app.listen(process.env.PORT || PORT_NUMBER);
 console.log("listening at port " + PORT_NUMBER);

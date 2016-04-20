@@ -2,8 +2,12 @@ const PORT_NUMBER = 5000;
 var express = require("express");
 var app = express();
 
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
+
 app.get("/", function(req,res){
-   res.end("FCC Challange : Timestamp micorservice");
+   res.render("index");
 });
 app.get("/:time", function(req,res){
 	//setup variables
